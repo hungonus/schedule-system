@@ -10,7 +10,7 @@
 
 /* eslint func-names: 0 */
 /* eslint global-require: 0 */
-const { configure } = require('quasar/wrappers');
+const { configure } = require("quasar/wrappers");
 
 module.exports = configure((/* ctx */) => ({
   eslint: {
@@ -30,12 +30,13 @@ module.exports = configure((/* ctx */) => ({
   // https://v2.quasar.dev/quasar-cli/boot-files
   boot: [
 
-    'axios',
+    "axios",
+    "mock"
   ],
 
   // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
   css: [
-    'app.scss',
+    "app.scss",
   ],
 
   // https://github.com/quasarframework/quasar/tree/dev/extras
@@ -48,18 +49,18 @@ module.exports = configure((/* ctx */) => ({
     // 'line-awesome',
     // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-    'roboto-font', // optional, you are not bound to it
-    'material-icons', // optional, you are not bound to it
+    "roboto-font", // optional, you are not bound to it
+    "material-icons", // optional, you are not bound to it
   ],
 
   // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
   build: {
     target: {
-      browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
-      node: 'node16',
+      browser: ["es2019", "edge88", "firefox78", "chrome87", "safari13.1"],
+      node: "node16",
     },
 
-    vueRouterMode: 'hash', // available values: 'hash', 'history'
+    vueRouterMode: "hash", // available values: 'hash', 'history'
     // vueRouterBase,
     // vueDevtools,
     // vueOptionsAPI: false,
@@ -140,16 +141,16 @@ module.exports = configure((/* ctx */) => ({
     // (gets superseded if process.env.PORT is specified at runtime)
 
     middlewares: [
-      'render', // keep this as last one
+      "render", // keep this as last one
     ],
   },
 
   // https://v2.quasar.dev/quasar-cli/developing-pwa/configuring-pwa
   pwa: {
-    workboxMode: 'generateSW', // or 'injectManifest'
+    workboxMode: "generateSW", // or 'injectManifest'
     injectPwaMetaTags: true,
-    swFilename: 'sw.js',
-    manifestFilename: 'manifest.json',
+    swFilename: "sw.js",
+    manifestFilename: "manifest.json",
     useCredentialsForManifestTag: false,
     // useFilenameHashes: true,
     // extendGenerateSWOptions (cfg) {}
@@ -175,7 +176,7 @@ module.exports = configure((/* ctx */) => ({
 
     inspectPort: 5858,
 
-    bundler: 'packager', // 'packager' or 'builder'
+    bundler: "packager", // 'packager' or 'builder'
 
     packager: {
       // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
@@ -193,14 +194,14 @@ module.exports = configure((/* ctx */) => ({
     builder: {
       // https://www.electron.build/configuration/configuration
 
-      appId: 'schedule-system',
+      appId: "schedule-system",
     },
   },
 
   // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-browser-extensions/configuring-bex
   bex: {
     contentScripts: [
-      'my-content-script',
+      "my-content-script",
     ],
 
     // extendBexScriptsConf (esbuildConf) {}
